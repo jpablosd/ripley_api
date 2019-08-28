@@ -5,12 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 
-const responseTime = require('response-time')
-const axios = require('axios');
-const redis = require('redis');
 
-
-const client = redis.createClient();
 
 
 var indexRouter = require('./routes/index');
@@ -20,7 +15,6 @@ var getProductsRouter = require("./routes/getProducts");
 
 var app = express();
 
-app.use(responseTime());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
